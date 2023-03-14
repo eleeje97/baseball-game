@@ -1,9 +1,11 @@
 package org.example;
 
 import org.example.domain.Output;
+import org.example.domain.TargetNumber;
 
 public class GameApplication {
     private static Output output;
+    private static TargetNumber targetNumber;
 
     public static void main(String[] args) {
         setGame();
@@ -16,5 +18,6 @@ public class GameApplication {
 
     public static void startGame() {
         output.startGame();
+        targetNumber = new TargetNumber();
     }
 }
