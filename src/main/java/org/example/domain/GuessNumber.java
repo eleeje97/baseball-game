@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GuessNumber {
+
     private List<Integer> numbers;
 
-    public GuessNumber(String userInput) {
-        if (!validate(userInput)) {
+    public GuessNumber(String userInput, int ballCount) {
+        if (!validate(userInput, ballCount)) {
             throw new IllegalArgumentException();
         }
         numbers = new ArrayList<>();
@@ -16,12 +17,12 @@ public class GuessNumber {
         }
     }
 
-    private boolean validate(String userInput) {
-        return isThree(userInput) && isDigit(userInput);
+    private boolean validate(String userInput, int ballCount) {
+        return checkBallCount(userInput, ballCount) && isDigit(userInput);
     }
 
-    private boolean isThree(String userInput) {
-        return userInput.length() == 3;
+    private boolean checkBallCount(String userInput, int ballCount) {
+        return userInput.length() == ballCount;
     }
 
     private boolean isDigit(String userInput) {

@@ -8,10 +8,10 @@ import static camp.nextstep.edu.missionutils.Randoms.pickNumberInRange;
 public class TargetNumber {
     private List<Integer> numbers;
 
-    public TargetNumber() {
+    public TargetNumber(int ballCount, int start, int end) {
         numbers = new ArrayList<>();
-        while (numbers.size() < 3) {
-            int num = pickNumberInRange(1, 9);
+        while (numbers.size() < ballCount) {
+            int num = pickNumberInRange(start, end);
             if (!numbers.contains(num))
                 numbers.add(num);
         }
