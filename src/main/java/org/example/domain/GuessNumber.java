@@ -7,6 +7,10 @@ public class GuessNumber {
 
     private List<Integer> numbers;
 
+    public List<Integer> getNumbers() {
+        return numbers;
+    }
+
     public GuessNumber(String userInput, int ballCount, int rangeStart, int rangeEnd) {
         if (!validate(userInput, ballCount, rangeStart, rangeEnd)) {
             throw new IllegalArgumentException();
