@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.domain.GuessNumber;
 import org.example.domain.TargetNumber;
 import org.example.view.UIManager;
 
@@ -10,8 +11,7 @@ public class GameApplication {
 
         uiManager.printStartGame();
         TargetNumber targetNumber = new TargetNumber();
-        String userInput = uiManager.inputGuessNumbers();
-
+        GuessNumber guessNumber = new GuessNumber(uiManager.inputGuessNumbers());
     }
 
 }
