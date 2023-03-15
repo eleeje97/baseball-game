@@ -13,7 +13,12 @@ public class GuessNumber {
         }
         numbers = new ArrayList<>();
         for (char c : userInput.toCharArray()) {
-            numbers.add(Integer.parseInt(String.valueOf(c)));
+            int num = Integer.parseInt(String.valueOf(c));
+            if (!isUnique(num)) {
+                throw new IllegalArgumentException();
+            }
+
+            numbers.add(num);
         }
     }
 
@@ -44,4 +49,7 @@ public class GuessNumber {
         return true;
     }
 
+    private boolean isUnique(int num) {
+        return !numbers.contains(num);
+    }
 }
