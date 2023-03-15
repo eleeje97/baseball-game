@@ -10,6 +10,7 @@ public class GameApplication {
 
         uiManager.printStartGame();
         TargetNumber targetNumber = new TargetNumber();
+        String userInput = uiManager.inputGuessNumbers();
 
     }
 
