@@ -17,11 +17,20 @@ public class GuessNumber {
     }
 
     private boolean validate(String userInput) {
-        return isThree(userInput);
+        return isThree(userInput) && isDigit(userInput);
     }
 
     private boolean isThree(String userInput) {
         return userInput.length() == 3;
+    }
+
+    private boolean isDigit(String userInput) {
+        for (char c : userInput.toCharArray()) {
+            if (!Character.isDigit(c)) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }
