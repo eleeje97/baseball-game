@@ -6,6 +6,10 @@ public class GameManager {
     RandomNumbers randomNumbers;
     UserNumbers userNumbers;
 
+    public UserNumbers getUserNumbers() {
+        return userNumbers;
+    }
+
     public void setRandomNumbers() {
         randomNumbers = new RandomNumbers();
     }

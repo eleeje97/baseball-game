@@ -17,6 +17,7 @@ public class GameApplication {
         while (!isSuccess) {
             gameManager.setUserNumbers(uiManager.inputUserNumbers());
             gameManager.compare();
+            uiManager.printResult(gameManager);
             isSuccess = gameManager.isSuccess();
         }
 

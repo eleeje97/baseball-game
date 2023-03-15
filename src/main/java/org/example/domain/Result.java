@@ -34,4 +34,14 @@ public class Result {
     public int getOut() {
         return out;
     }
+
+    // TODO: 결과 출력 수정
+    @Override
+    public String toString() {
+        return "Result{" +
+                "strike=" + strike +
+                ", ball=" + ball +
+                ", out=" + out +
+                '}';
+    }
 }
