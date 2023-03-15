@@ -1,5 +1,7 @@
 package org.example.view;
 
+import org.example.domain.Result;
+
 import static camp.nextstep.edu.missionutils.Console.readLine;
 
 public class UIManager {
@@ -7,8 +9,9 @@ public class UIManager {
         System.out.println("##### Game Start #####");
     }
 
-    public String inputGuessNumbers() {
+    public String inputUserNumbers() {
         System.out.print("숫자를 입력해주세요 : ");
         return readLine();
     }
+
 }
