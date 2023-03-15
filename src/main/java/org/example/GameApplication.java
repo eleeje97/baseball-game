@@ -14,7 +14,7 @@ public class GameApplication {
 
         uiManager.printStartGame();
         TargetNumber targetNumber = new TargetNumber(BALL_COUNT, RANGE_START, RANGE_END);
-        GuessNumber guessNumber = new GuessNumber(uiManager.inputGuessNumbers(), BALL_COUNT);
+        GuessNumber guessNumber = new GuessNumber(uiManager.inputGuessNumbers(), BALL_COUNT, RANGE_START, RANGE_END);
     }
 
 }
