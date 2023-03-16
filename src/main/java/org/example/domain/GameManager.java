@@ -21,7 +21,7 @@ public class GameManager {
     }
 
     public void compare() {
-        userNumbers.compare(randomNumbers);
+        userNumbers.compareTo(randomNumbers);
     }
 
     public boolean isSuccess() {
