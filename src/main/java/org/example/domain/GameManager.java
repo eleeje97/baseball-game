@@ -5,8 +5,8 @@ public class GameManager {
     public static final int RANGE_START = 1;
     public static final int RANGE_END = 9;
 
-    RandomNumbers randomNumbers;
-    UserNumbers userNumbers;
+    private RandomNumbers randomNumbers;
+    private UserNumbers userNumbers;
 
     public UserNumbers getUserNumbers() {
         return userNumbers;
