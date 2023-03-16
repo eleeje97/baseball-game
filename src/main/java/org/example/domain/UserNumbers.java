@@ -23,14 +23,6 @@ public class UserNumbers {
         return result;
     }
 
-    public void setResult(Result result) {
-        this.result = result;
-    }
-
-    public List<Number> getNumbers() {
-        return numbers;
-    }
-
     private boolean checkBallCount(String userInput) {
         return userInput.length() == BALL_COUNT;
     }
