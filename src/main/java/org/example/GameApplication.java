@@ -5,6 +5,10 @@ import org.example.view.UIManager;
 
 public class GameApplication {
     public static void main(String[] args) {
+        playBaseBallGame();
+    }
+
+    public static void playBaseBallGame() {
         UIManager uiManager = new UIManager();
         GameManager gameManager = new GameManager();
 
@@ -23,7 +27,9 @@ public class GameApplication {
 
         // 게임 종료
         uiManager.printEndGame();
-        String userInput = uiManager.inputRestartGame();
+        if (gameManager.restart(uiManager.inputRestartGame())) {
+            GameApplication.playBaseBallGame();
+        }
     }
 
 }
