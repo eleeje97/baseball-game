@@ -14,7 +14,6 @@ public class GameApplication {
 
         // 게임 시작
         uiManager.printStartGame();
-        gameManager.setRandomNumbers();
 
         // 사용자 입력, 비교, 결과출력
         boolean isSuccess = false;

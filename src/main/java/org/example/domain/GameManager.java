@@ -5,15 +5,15 @@ public class GameManager {
     public static final int RANGE_START = 1;
     public static final int RANGE_END = 9;
 
-    private RandomNumbers randomNumbers;
+    private final RandomNumbers randomNumbers;
     private UserNumbers userNumbers;
+
+    public GameManager() {
+        randomNumbers = new RandomNumbers();
+    }
 
     public UserNumbers getUserNumbers() {
         return userNumbers;
-    }
-
-    public void setRandomNumbers() {
-        randomNumbers = new RandomNumbers();
     }
 
     public void setUserNumbers(String userInput) {
