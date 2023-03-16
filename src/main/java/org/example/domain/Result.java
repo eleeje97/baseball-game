@@ -1,8 +1,8 @@
 package org.example.domain;
 
-public class Result {
-    private static final int BALL_COUNT = 3;
+import static org.example.domain.GameManager.*;
 
+public class Result {
     private int strike;
     private int ball;
     private int out;

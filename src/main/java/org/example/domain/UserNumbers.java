@@ -3,9 +3,9 @@ package org.example.domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserNumbers {
-    private static final int BALL_COUNT = 3;
+import static org.example.domain.GameManager.*;
 
+public class UserNumbers {
     private final List<Number> numbers;
     private Result result;
 

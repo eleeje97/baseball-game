@@ -4,10 +4,9 @@ import org.example.domain.GameManager;
 import org.example.domain.Result;
 
 import static camp.nextstep.edu.missionutils.Console.readLine;
+import static org.example.domain.GameManager.*;
 
 public class UIManager {
-    private static final int BALL_COUNT = 3;
-
     public void printStartGame() {
         System.out.println("##### Game Start #####");
     }

@@ -1,7 +1,9 @@
 package org.example.domain;
 
 public class GameManager {
-    private static final int BALL_COUNT = 3;
+    public static final int BALL_COUNT = 3;
+    public static final int RANGE_START = 1;
+    public static final int RANGE_END = 9;
 
     RandomNumbers randomNumbers;
     UserNumbers userNumbers;

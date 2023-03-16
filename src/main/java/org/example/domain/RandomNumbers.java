@@ -4,11 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static camp.nextstep.edu.missionutils.Randoms.pickNumberInRange;
+import static org.example.domain.GameManager.*;
 
 public class RandomNumbers {
-    private static final int BALL_COUNT = 3;
-    private static final int RANGE_START = 1;
-    private static final int RANGE_END = 9;
 
     private final List<Integer> numbers;
 

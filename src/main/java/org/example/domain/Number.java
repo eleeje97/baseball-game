@@ -1,9 +1,8 @@
 package org.example.domain;
 
-public class Number {
-    private static final int RANGE_START = 1;
-    private static final int RANGE_END = 9;
+import static org.example.domain.GameManager.*;
 
+public class Number {
     private final int number;
 
     public Number(char userInput) {
