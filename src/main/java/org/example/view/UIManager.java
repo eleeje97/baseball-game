@@ -6,6 +6,8 @@ import org.example.domain.Result;
 import static camp.nextstep.edu.missionutils.Console.readLine;
 
 public class UIManager {
+    private static final int BALL_COUNT = 3;
+
     public void printStartGame() {
         System.out.println("##### Game Start #####");
     }
@@ -19,5 +21,10 @@ public class UIManager {
         Result result = gameManager.getUserNumbers().getResult();
         System.out.println(result);
     }
+
+    public void printEndGame() {
+        System.out.println(BALL_COUNT + "개의 숫자를 모두 맞히셨습니다! 게임 종료");
+    }
+
 
 }

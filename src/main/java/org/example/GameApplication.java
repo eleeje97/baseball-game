@@ -22,6 +22,7 @@ public class GameApplication {
         }
 
         // 게임 종료
+        uiManager.printEndGame();
     }
 
 }
