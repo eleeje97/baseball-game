@@ -21,25 +21,7 @@ public class GameManager {
     }
 
     public void compare() {
-        Result result = new Result();
-        for (int i = 0; i < BALL_COUNT; i++) {
-            compare(i, userNumbers.getNumbers().get(i).getNumber(), result);
-        }
-        userNumbers.setResult(result);
-    }
-
-    private void compare(int index, int guess, Result result) {
-        if (!randomNumbers.getNumbers().contains(guess)) {
-            result.out();
-            return;
-        }
-
-        if (randomNumbers.getNumbers().indexOf(guess) == index) {
-            result.strike();
-            return;
-        }
-
-        result.ball();
+        userNumbers.compare(randomNumbers);
     }
 
     public boolean isSuccess() {
