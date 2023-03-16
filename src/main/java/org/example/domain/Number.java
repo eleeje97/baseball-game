@@ -4,7 +4,7 @@ public class Number {
     private static final int RANGE_START = 1;
     private static final int RANGE_END = 9;
 
-    private int number;
+    private final int number;
 
     public Number(char userInput) {
         int number = convertToDigit(userInput);

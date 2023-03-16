@@ -41,7 +41,7 @@ public class GameManager {
     }
 
     public boolean isSuccess() {
-        return userNumbers.getResult().getStrike() == BALL_COUNT;
+        return userNumbers.getResult().isSuccess();
     }
 
     public boolean restart(String userInput) {

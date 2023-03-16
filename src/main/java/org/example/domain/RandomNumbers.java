@@ -10,7 +10,7 @@ public class RandomNumbers {
     private static final int RANGE_START = 1;
     private static final int RANGE_END = 9;
 
-    private List<Integer> numbers;
+    private final List<Integer> numbers;
 
     public List<Integer> getNumbers() {
         return numbers;

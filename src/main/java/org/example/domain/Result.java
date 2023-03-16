@@ -25,16 +25,8 @@ public class Result {
         out++;
     }
 
-    public int getStrike() {
-        return strike;
-    }
-
-    public int getBall() {
-        return ball;
-    }
-
-    public int getOut() {
-        return out;
+    public boolean isSuccess() {
+        return strike == BALL_COUNT;
     }
 
     @Override

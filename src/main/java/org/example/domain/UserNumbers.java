@@ -6,7 +6,7 @@ import java.util.List;
 public class UserNumbers {
     private static final int BALL_COUNT = 3;
 
-    private List<Number> numbers;
+    private final List<Number> numbers;
     private Result result;
 
     public Result getResult() {
