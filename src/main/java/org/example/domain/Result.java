@@ -1,6 +1,8 @@
 package org.example.domain;
 
 public class Result {
+    private static final int BALL_COUNT = 3;
+
     private int strike;
     private int ball;
     private int out;
@@ -35,13 +37,30 @@ public class Result {
         return out;
     }
 
-    // TODO: 결과 출력 수정
     @Override
     public String toString() {
-        return "Result{" +
-                "strike=" + strike +
-                ", ball=" + ball +
-                ", out=" + out +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        printOut(sb);
+        printBall(sb);
+        printStrike(sb);
+        return sb.toString();
+    }
+
+    private void printOut(StringBuilder sb) {
+        if (out == BALL_COUNT) {
+            sb.append("낫싱");
+        }
+    }
+
+    private void printBall(StringBuilder sb) {
+        if (ball > 0) {
+            sb.append(ball).append("볼 ");
+        }
+    }
+
+    private void printStrike(StringBuilder sb) {
+        if (strike > 0) {
+            sb.append(strike).append("스트라이크");
+        }
     }
 }
