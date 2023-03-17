@@ -17,7 +17,7 @@ public class UIManager {
     }
 
     public void printResult(GameManager gameManager) {
-        Result result = gameManager.getUserNumbers().getResult();
+        Result result = gameManager.getResult();
         System.out.println(result);
     }
 

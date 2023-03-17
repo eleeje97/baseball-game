@@ -12,8 +12,8 @@ public class GameManager {
         randomNumbers = new RandomNumbers();
     }
 
-    public UserNumbers getUserNumbers() {
-        return userNumbers;
+    public Result getResult() {
+        return userNumbers.getResult();
     }
 
     public void setUserNumbers(String userInput) {
