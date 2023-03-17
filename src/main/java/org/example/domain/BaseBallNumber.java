@@ -1,5 +1,7 @@
 package org.example.domain;
 
+import java.util.Objects;
+
 import static org.example.domain.GameManager.*;
 
 public class BaseBallNumber {
@@ -27,5 +29,18 @@ public class BaseBallNumber {
 
     public int getNumber() {
         return number;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BaseBallNumber that = (BaseBallNumber) o;
+        return number == that.number;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(number);
     }
 }
