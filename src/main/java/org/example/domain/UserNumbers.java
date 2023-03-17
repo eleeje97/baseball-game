@@ -6,16 +6,16 @@ import java.util.List;
 import static org.example.domain.GameManager.*;
 
 public class UserNumbers {
-    private final List<Number> numbers;
+    private final List<BaseBallNumber> baseBallNumbers;
     private Result result;
 
     public UserNumbers(String userInput) {
         if (!checkBallCount(userInput)) {
             throw new IllegalArgumentException();
         }
-        numbers = new ArrayList<>();
+        baseBallNumbers = new ArrayList<>();
         for (char c : userInput.toCharArray()) {
-            addNumber(new Number(c));
+            addNumber(new BaseBallNumber(c));
         }
     }
 
@@ -27,21 +27,21 @@ public class UserNumbers {
         return userInput.length() == BALL_COUNT;
     }
 
-    private void addNumber(Number number) {
-        if (!checkDuplication(number)) {
+    private void addNumber(BaseBallNumber baseBallNumber) {
+        if (!checkDuplication(baseBallNumber)) {
             throw new IllegalArgumentException();
         }
-        numbers.add(number);
+        baseBallNumbers.add(baseBallNumber);
     }
 
-    private boolean checkDuplication(Number number) {
-        return !numbers.contains(number);
+    private boolean checkDuplication(BaseBallNumber baseBallNumber) {
+        return !baseBallNumbers.contains(baseBallNumber);
     }
 
     public void compareTo(RandomNumbers randomNumbers) {
         result = new Result();
         for (int i = 0; i < BALL_COUNT; i++) {
-            checkBallOrStrike(i, numbers.get(i).getNumber(), randomNumbers);
+            checkBallOrStrike(i, baseBallNumbers.get(i).getNumber(), randomNumbers);
         }
     }
 

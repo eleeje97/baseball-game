@@ -2,10 +2,10 @@ package org.example.domain;
 
 import static org.example.domain.GameManager.*;
 
-public class Number {
+public class BaseBallNumber {
     private final int number;
 
-    public Number(char userInput) {
+    public BaseBallNumber(char userInput) {
         int number = convertToDigit(userInput);
         checkRange(number);
         this.number = number;
