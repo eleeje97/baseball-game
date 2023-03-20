@@ -38,14 +38,14 @@ public class UserNumbers {
         return !baseBallNumbers.contains(baseBallNumber);
     }
 
-    public void compareTo(RandomNumbers randomNumbers) {
+    public void compareTo(RandomNumbersInterface randomNumbers) {
         result = new Result();
         for (int i = 0; i < BALL_COUNT; i++) {
             checkBallOrStrike(i, baseBallNumbers.get(i).getNumber(), randomNumbers);
         }
     }
 
-    private void checkBallOrStrike(int index, int guess, RandomNumbers randomNumbers) {
+    private void checkBallOrStrike(int index, int guess, RandomNumbersInterface randomNumbers) {
         if (!randomNumbers.getNumbers().contains(guess)) {
             result.out();
             return;

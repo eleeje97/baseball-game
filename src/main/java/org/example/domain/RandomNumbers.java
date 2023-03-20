@@ -6,13 +6,9 @@ import java.util.List;
 import static camp.nextstep.edu.missionutils.Randoms.pickNumberInRange;
 import static org.example.domain.GameManager.*;
 
-public class RandomNumbers {
+public class RandomNumbers implements RandomNumbersInterface {
 
     private final List<Integer> numbers;
-
-    public List<Integer> getNumbers() {
-        return numbers;
-    }
 
     public RandomNumbers() {
         numbers = new ArrayList<>();
@@ -27,4 +23,8 @@ public class RandomNumbers {
             numbers.add(number);
     }
 
+    @Override
+    public List<Integer> getNumbers() {
+        return numbers;
+    }
 }

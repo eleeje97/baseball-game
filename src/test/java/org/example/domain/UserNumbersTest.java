@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import java.util.List;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
@@ -31,13 +29,8 @@ public class UserNumbersTest {
     @DisplayName("볼, 스트라이크 개수 카운트 테스트")
     @Test
     void 랜덤숫자와_사용자숫자_비교_테스트() {
-        RandomNumbers randomNumbers = new RandomNumbers();
-        List<Integer> randomNumberList = randomNumbers.getNumbers();
-
-        String userInput = randomNumberList.get(1) +
-                String.valueOf(randomNumberList.get(0)) +
-                randomNumberList.get(2);
-        UserNumbers userNumbers = new UserNumbers(userInput);
+        RandomNumbersInterface randomNumbers = new MockRandomNumbers();
+        UserNumbers userNumbers = new UserNumbers("471");
 
         userNumbers.compareTo(randomNumbers);
         Result result = userNumbers.getResult();
