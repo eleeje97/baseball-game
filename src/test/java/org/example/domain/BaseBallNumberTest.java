@@ -17,11 +17,21 @@ public class BaseBallNumberTest {
         }).isInstanceOf(IllegalArgumentException.class);
     }
 
-    @DisplayName("입력한 수가 범위를 벗어났을 때 예외처리 테스트")
-    @Test
-    void 입력값_범위체크_테스트() {
+    @DisplayName("입력한 수가 범위를 벗어났을 때 예외처리 테스트 - 실패케이스")
+    @ParameterizedTest
+    @ValueSource(chars = {'0'})
+    void 입력값_범위체크_테스트_실패(char userInput) {
         assertThatThrownBy(() -> {
-            new BaseBallNumber('0');
+            new BaseBallNumber(userInput);
+        }).isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @DisplayName("입력한 수가 범위를 벗어났을 때 예외처리 테스트 - 성공케이스")
+    @ParameterizedTest
+    @ValueSource(chars = {'1', '5', '9'})
+    void 입력값_범위체크_테스트_성공(char userInput) {
+        assertThatThrownBy(() -> {
+            new BaseBallNumber(userInput);
         }).isInstanceOf(IllegalArgumentException.class);
     }
 
